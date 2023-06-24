@@ -1,4 +1,5 @@
 import { Title, TrendingList, MovieTitle } from '../styled-component/Home.styled';
+import { Box } from '../styled-component/Box'
 import axios from 'axios';
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react';
@@ -32,7 +33,7 @@ const Home = () => {
     const imageDefaultUrl = 'https://image.tmdb.org/t/p/w300';
 
     return (
-        <>
+        <Box>
             <Title>Trending today</Title>
             <TrendingList as="ul">
                 {moviesTrends.map(({ title, id, poster_path }) => (
@@ -44,7 +45,7 @@ const Home = () => {
                     </li>
                 ))}
             </TrendingList>
-        </>
+        </Box>
 
     )
 };
