@@ -9,7 +9,7 @@ export const SharedLayout = () => {
             <Header>
                 <Logo>
                     <FcFilmReel />
-                    Go_Discovery Film
+                    Let's open the movies!
                 </Logo>
                 <nav>
                     <Link to="/" end>
