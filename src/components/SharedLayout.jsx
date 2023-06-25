@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { Container, Header, Logo, Link } from "../styled-component/SharedLayout.styled";
 import { FcFilmReel } from "react-icons/fc";
+import { routes } from '../routes';
 
 export const SharedLayout = () => {
     return (
@@ -12,10 +13,10 @@ export const SharedLayout = () => {
                     Let's open the movies!
                 </Logo>
                 <nav>
-                    <Link to="/" end>
+                    <Link to={routes.HOME} end>
                         Home
                     </Link>
-                    <Link to="/movies">Movies</Link>
+                    <Link to={routes.MOVIES}>Movies</Link>
                 </nav>
             </Header>
             <Suspense fallback={<div>Loading page...</div>}>

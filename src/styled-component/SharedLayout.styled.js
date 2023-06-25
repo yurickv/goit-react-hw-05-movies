@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
+  text-align: center;
   max-width: 1880px;
   margin: 0 auto;
   padding: 0 16px;

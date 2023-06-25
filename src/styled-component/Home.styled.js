@@ -6,7 +6,7 @@ export const Title = styled.h1`
   margin-bottom: ${({ theme }) => theme.space[4]}px;
 `;
 
-export const TrendingList = styled.ul`
+export const MuviesList = styled.ul`
   display: grid;
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
