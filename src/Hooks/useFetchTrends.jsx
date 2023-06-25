@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getTrendMovies } from 'Servise/Movie-servise';
+import { getTrendMovies } from 'Servise/Movie-serviseAPI';
 
 export const useFetchTrends = () => {
     const [moviesTrends, setMoviesTrends] = useState([]);

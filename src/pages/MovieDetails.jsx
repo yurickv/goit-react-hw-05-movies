@@ -28,15 +28,11 @@ export const MovieDetails = () => {
                         Go Back
                     </GoBackBtn>}
 
-
                 {movieInfo && <MovieDetailsMarkup movieInfo={movieInfo} />}
-                {!isLoading && <Link to="cast" state={{ from: location.state?.from ?? '/' }}>
-                    Cast
-                </Link>}
 
-                {!isLoading && <Link to="reviews" state={{ from: location.state?.from ?? '/' }}>
-                    Reviews
-                </Link>}
+                {!isLoading && <Link to="cast" state={{ from: location.state?.from ?? '/' }}>Cast</Link>}
+
+                {!isLoading && <Link to="reviews" state={{ from: location.state?.from ?? '/' }}>Reviews</Link>}
 
                 <Suspense fallback={<div>Loading subpage...</div>}>
                     <Outlet />

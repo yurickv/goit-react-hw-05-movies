@@ -25,10 +25,9 @@ export const MovieDetailsMarkup = ({ movieInfo }) => {
                 </MovieUserScore>
                 <MovieOverviewTitle>Overview</MovieOverviewTitle>
                 <MovievOverview>{overview}</MovievOverview>
-                <MovieGenresTitle>Genres: </MovieGenresTitle>
-                {genres.map(({ name }) => (
-                    <MovieGenres key={name}>{name}</MovieGenres>
-                ))}
+                <MovieGenresTitle>Genres:
+                    {genres.map(({ name }) => (<MovieGenres key={name}>{name}</MovieGenres>))}
+                </MovieGenresTitle>
             </Box>
         </Box>
     );

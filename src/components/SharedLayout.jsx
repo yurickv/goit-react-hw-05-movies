@@ -10,7 +10,7 @@ export const SharedLayout = () => {
             <Header>
                 <Logo>
                     <FcFilmReel />
-                    Let's open the movies!
+                    Let's discover the movies!
                 </Logo>
                 <nav>
                     <Link to={routes.HOME} end>

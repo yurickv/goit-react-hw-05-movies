@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieID } from 'Servise/Movie-serviseAPI';
+import { getMovieReviews } from 'Servise/Movie-serviseAPI';
 
-export const useFetchFilmID = () => {
-    const [movieInfo, setMovieInfo] = useState(null);
+export const useFetchFilmReviews = () => {
+    const [reviews, setReviews] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const { id } = useParams();
-    // console.log(id);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -16,8 +15,8 @@ export const useFetchFilmID = () => {
             try {
                 setIsLoading(true);
 
-                const fetchedMovie = await getMovieID(id, controller);
-                setMovieInfo(fetchedMovie);
+                const { results } = await getMovieReviews(id, controller);
+                setReviews(results);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -29,5 +28,5 @@ export const useFetchFilmID = () => {
 
     }, [id]);
 
-    return { movieInfo, isLoading, error };
+    return { reviews, isLoading, error };
 };
