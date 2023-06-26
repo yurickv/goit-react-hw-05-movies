@@ -1,4 +1,4 @@
-import { GoBackButton } from '../styled-component/GoBackBtn.styled'
+import { GoBackButton } from './GoBackBtn.styled'
 
 
 export const GoBackBtn = ({ path, children }) => {

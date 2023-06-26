@@ -1,9 +1,9 @@
-import { useFetchSearch } from '../Hooks/useFetch_SearchFilm';
-import { Loader } from '../components/Loader';
-import { FilmsList } from 'components/FilmsList';
-import { SearchForm } from '../components/SearchForm'
-import { Title } from '../styled-component/Home.styled';
-import { Box } from 'styled-component/Box';
+import { useFetchSearch } from '../../Hooks/useFetch_SearchFilm';
+import { Loader } from '../../components/Loader/Loader';
+import { FilmsList } from 'components/MuvieList/FilmsList';
+import { SearchForm } from '../../components/SearchForm/SearchForm'
+import { Title } from '../Home/Home.styled';
+import { Box } from 'Servise/Box';
 
 
 const Movies = () => {

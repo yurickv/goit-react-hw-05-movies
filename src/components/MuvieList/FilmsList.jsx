@@ -1,6 +1,6 @@
-import { MuviesList, MovieTitle } from '../styled-component/Home.styled'
+import { MuviesList, MovieTitle } from '../../pages/Home/Home.styled'
 import { NavLink, useLocation } from "react-router-dom";
-import { routes } from '../routes';
+import { routes } from '../../Servise/routes';
 
 export const FilmsList = ({ movies }) => {
     const location = useLocation();

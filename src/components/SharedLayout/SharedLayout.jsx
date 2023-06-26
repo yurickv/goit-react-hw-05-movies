@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import { Container, Header, Logo, Link } from "../styled-component/SharedLayout.styled";
+import { Container, Header, Logo, Link } from "./SharedLayout.styled";
 import { FcFilmReel } from "react-icons/fc";
-import { routes } from '../routes';
+import { routes } from '../../Servise/routes';
 
 export const SharedLayout = () => {
     return (

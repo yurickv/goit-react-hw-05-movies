@@ -1,13 +1,13 @@
 import { useFetchFilmID } from 'Hooks/useFetchFilmID'
-import { GoBackBtn } from '../components/GoBackBtn';
-import { Loader } from 'components/Loader';
+import { GoBackBtn } from '../components/GoBackBtn/GoBackBtn';
+import { Loader } from 'components/Loader/Loader';
 import { HiArrowLeft } from 'react-icons/hi';
-import { MovieDetailsMarkup } from '../components/MovieDetailsMarkup'
+import { MovieDetailsMarkup } from '../components/MuvieList/MovieDetailsMarkup'
 import { Suspense } from 'react';
 import { useLocation, Outlet } from 'react-router-dom';
-import { routes } from 'routes';
-import { Container, Link } from "../styled-component/SharedLayout.styled";
-import { Box } from 'styled-component/Box';
+import { routes } from 'Servise/routes';
+import { Container, Link } from "../components/SharedLayout/SharedLayout.styled";
+
 
 
 
@@ -18,27 +18,27 @@ const MovieDetails = () => {
     const goBackLink = location?.state?.from ?? routes.HOME;
 
     return (
-        <Box>
-            <Container>
-                {isLoading && <Loader />}
-                {error && <div>Error!!!</div>}
-                {!isLoading &&
-                    <GoBackBtn path={goBackLink}>
-                        <HiArrowLeft size="24" />
-                        Go Back
-                    </GoBackBtn>}
 
-                {movieInfo && <MovieDetailsMarkup movieInfo={movieInfo} />}
+        <Container padding={20}>
+            {isLoading && <Loader />}
+            {error && <div>Error!!!</div>}
+            {!isLoading &&
+                <GoBackBtn path={goBackLink}>
+                    <HiArrowLeft size="24" />
+                    Go Back
+                </GoBackBtn>}
 
-                {!isLoading && <Link to="cast" state={{ from: location.state?.from ?? '/' }}>Cast</Link>}
+            {movieInfo && <MovieDetailsMarkup movieInfo={movieInfo} />}
 
-                {!isLoading && <Link to="reviews" state={{ from: location.state?.from ?? '/' }}>Reviews</Link>}
+            {!isLoading && <Link to="cast" state={{ from: location.state?.from ?? `${routes.HOME}` }}>Cast</Link>}
 
-                <Suspense fallback={<div>Loading subpage...</div>}>
-                    <Outlet />
-                </Suspense>
-            </Container>
-        </Box>
+            {!isLoading && <Link to="reviews" state={{ from: location.state?.from ?? `${routes.HOME}` }}>Reviews</Link>}
+
+            <Suspense fallback={<div>Loading subpage...</div>}>
+                <Outlet />
+            </Suspense>
+        </Container>
+
     );
 
 };

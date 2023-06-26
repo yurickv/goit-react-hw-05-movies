@@ -1,8 +1,8 @@
-import { Title } from '../styled-component/Home.styled';
-import { Box } from '../styled-component/Box'
+import { Title } from './Home.styled';
+import { Box } from '../../Servise/Box'
 import { useFetchTrends } from 'Hooks/useFetchTrends';
-import { Loader } from 'components/Loader';
-import { FilmsList } from 'components/FilmsList';
+import { Loader } from 'components/Loader/Loader';
+import { FilmsList } from 'components/MuvieList/FilmsList';
 
 const Home = () => {
     const { moviesTrends, isLoading, error } = useFetchTrends();

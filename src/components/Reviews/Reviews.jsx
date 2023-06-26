@@ -1,5 +1,5 @@
-import { ReviewItem, AuthorName, Review } from '../styled-component/Revievs.styled';
-import { useFetchFilmReviews } from '../Hooks/useFetchFilmReviews';
+import { ReviewItem, AuthorName, Review, ReviewsList } from './Revievs.styled';
+import { useFetchFilmReviews } from '../../Hooks/useFetchFilmReviews';
 
 
 const Reviews = () => {
@@ -7,14 +7,14 @@ const Reviews = () => {
 
 
     return reviews.length > 0 ? (
-        <ul>
+        <ReviewsList>
             {reviews.map(({ author, content, id }) => (
                 <ReviewItem key={id}>
                     <AuthorName>Author: {author}</AuthorName>
                     <Review>{content}</Review>
                 </ReviewItem>
             ))}
-        </ul>
+        </ReviewsList>
     ) : (
         <Review> There are yet no reviews for this film.</Review>
     );

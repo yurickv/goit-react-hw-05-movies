@@ -1,5 +1,5 @@
 import { FiSearch } from 'react-icons/fi';
-import { BtnSearch, SearchFormStyled, SearchField } from '../styled-component/SearhForm.styled';
+import { BtnSearch, SearchFormStyled, SearchField } from './SearhForm.styled';
 import { useState } from 'react';
 
 export const SearchForm = ({ onSubmit }) => {

@@ -1,12 +1,12 @@
-import { Box } from '../styled-component/Box';
+import { Box } from '../../Servise/Box';
 import {
     MovieTitle,
     MovieUserScore,
     MovieOverviewTitle,
     MovievOverview,
-    MovieGenresTitle,
-    MovieGenres,
-} from '../styled-component/Movie-detial.styled';
+    Genres,
+    DataText,
+} from './Movie-detial.styled';
 
 export const MovieDetailsMarkup = ({ movieInfo }) => {
     const { title, poster_path, release_date, genres, vote_average, overview } =
@@ -25,9 +25,8 @@ export const MovieDetailsMarkup = ({ movieInfo }) => {
                 </MovieUserScore>
                 <MovieOverviewTitle>Overview</MovieOverviewTitle>
                 <MovievOverview>{overview}</MovievOverview>
-                <MovieGenresTitle>Genres:
-                    {genres.map(({ name }) => (<MovieGenres key={name}>{name}</MovieGenres>))}
-                </MovieGenresTitle>
+                <Genres>Genres</Genres>
+                <DataText>{genres.map(el => el.name).join(' / ')}</DataText>
             </Box>
         </Box>
     );

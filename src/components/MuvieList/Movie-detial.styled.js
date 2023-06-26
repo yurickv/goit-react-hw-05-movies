@@ -20,19 +20,15 @@ export const MovievOverview = styled.p`
   margin-bottom: ${({ theme }) => theme.space[3]}px;
 `;
 
-export const MovieGenresTitle = styled.ul`
-  text-align: start;
-  font-weight: ${({ theme }) => theme.fontWeights.normal};
-  font-size: ${({ theme }) => theme.fontSizes.m};
-  font-family: ${({ theme }) => theme.fonts.roboto};
-  margin-bottom: ${({ theme }) => theme.space[2]}px;
+export const Genres = styled.h3`
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
 `;
-
-export const MovieGenres = styled.li`
-  font-weight: ${({ theme }) => theme.fontWeights.normal};
-  font-size: ${({ theme }) => theme.fontSizes.s};
-  font-family: ${({ theme }) => theme.fonts.monospace};
-  margin-bottom: ${({ theme }) => theme.space[1]}px;
+export const DataText = styled.p`
+  margin-bottom: 20px;
+  color: black;
 `;
 
 export const Link = styled(NavLink)`
