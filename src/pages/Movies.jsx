@@ -6,7 +6,7 @@ import { Title } from '../styled-component/Home.styled';
 import { Box } from 'styled-component/Box';
 
 
-export const Movies = () => {
+const Movies = () => {
 
     const { moviesSearch, isLoading, error, handleChange } = useFetchSearch();
 
@@ -19,4 +19,5 @@ export const Movies = () => {
             {moviesSearch && <FilmsList movies={moviesSearch} />}
         </Box>
     );
-}
+};
+export default Movies;

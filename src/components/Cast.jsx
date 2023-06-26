@@ -2,7 +2,7 @@ import { Box } from '../styled-component/Box';
 import { ActorName, Actor, ActorCharacter } from '../styled-component/Cast.styled';
 import { useFetchFilmCast } from '../Hooks/useFetchFilmCast';
 
-export const Cast = () => {
+const Cast = () => {
     const { actors } = useFetchFilmCast();
     const imageDefaultUrl = 'https://image.tmdb.org/t/p/w200';
     return (
@@ -21,3 +21,4 @@ export const Cast = () => {
         )
     );
 };
+export default Cast;

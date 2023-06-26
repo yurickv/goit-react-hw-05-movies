@@ -2,7 +2,7 @@ import { ReviewItem, AuthorName, Review } from '../styled-component/Revievs.styl
 import { useFetchFilmReviews } from '../Hooks/useFetchFilmReviews';
 
 
-export const Reviews = () => {
+const Reviews = () => {
     const { reviews } = useFetchFilmReviews();
 
 
@@ -19,3 +19,4 @@ export const Reviews = () => {
         <Review> There are yet no reviews for this film.</Review>
     );
 };
+export default Reviews;

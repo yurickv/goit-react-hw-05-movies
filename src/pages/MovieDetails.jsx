@@ -11,7 +11,7 @@ import { Box } from 'styled-component/Box';
 
 
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const location = useLocation();
     const { movieInfo, isLoading, error } = useFetchFilmID();
 
@@ -41,4 +41,5 @@ export const MovieDetails = () => {
         </Box>
     );
 
-}
+};
+export default MovieDetails;
